@@ -278,7 +278,7 @@
 - (void)testBoolInsert
 {
     [self.db executeUpdate:@"create table btest (aRowName integer)"];
-    [self.db executeUpdate:@"insert into btest (aRowName) values (?)", [NSNumber numberWithBool:12]];
+    [self.db executeUpdate:@"insert into btest (aRowName) values (?)", [NSNumber numberWithBool:YES]];
     
     XCTAssertFalse([self.db hadError], @"Shouldn't have any errors");
     
